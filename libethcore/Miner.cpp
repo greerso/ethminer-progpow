@@ -170,6 +170,7 @@ bool Miner::initEpoch_internal()
 
 void Miner::minerLoop()
 {
+
     int newEpoch;
     uint32_t newProgPoWPeriod;
 
@@ -177,7 +178,7 @@ void Miner::minerLoop()
     // They will be handled in workLoop implemented in derived class
     while (!shouldStop())
     {
-        newEpoch = 0;
+        newEpoch = -1;
         newProgPoWPeriod = 0;
 
         // Wait for work or 3 seconds (whichever the first)
@@ -202,7 +203,7 @@ void Miner::minerLoop()
             boost::mutex::scoped_lock l(x_work);
 
             // On epoch change for sure we have a period switch
-            newEpoch = (m_work_latest.epoch != m_work_active.epoch) ? m_work_latest.epoch : 0;
+            newEpoch = (m_work_latest.epoch != m_work_active.epoch) ? m_work_latest.epoch : -1;
             if (m_work_latest.algo == "progpow")
             {
                 // Check latest period is different from active period
@@ -238,7 +239,7 @@ void Miner::minerLoop()
         }
 
         // Epoch change ?
-        if (newEpoch)
+        if (newEpoch >= 0)
         {
             // If mining algo is ProgPoW invoke async compilation
             // of kernel while DAG is generating. Epoch context is already loaded
