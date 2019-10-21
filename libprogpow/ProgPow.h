@@ -4,7 +4,7 @@
 #include <string>
 
 // blocks before changing the random program
-#define PROGPOW_PERIOD 50
+#define PROGPOW_PERIOD 10
 // lanes that work together calculating a hash
 #define PROGPOW_LANES 16
 // uint32 registers per lane
@@ -16,9 +16,9 @@
 // DAG accesses, also the number of loops executed
 #define PROGPOW_CNT_DAG 64u
 // random cache accesses per loop
-#define PROGPOW_CNT_CACHE 12u
+#define PROGPOW_CNT_CACHE 11u
 // random math instructions per loop
-#define PROGPOW_CNT_MATH 20u
+#define PROGPOW_CNT_MATH 18u
 
 typedef struct
 {
