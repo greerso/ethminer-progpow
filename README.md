@@ -69,7 +69,7 @@ Check our [samples](docs/POOL_EXAMPLES_ETH.md) to see how to connect to differen
 | CI           | OS      | Status  | Development builds |
 | ------------ | ------- | -----   | -----------------  |
 | [AppVeyor]   | Windows | [![AppVeyor](https://img.shields.io/appveyor/ci/jean-m-cyr/ethminer/master.svg)][AppVeyor] | ✓ Build artifacts available for all PRs and master |
-| CircleCI     | Linux   | [![CircleCI](https://circleci.com/gh/miscellaneousbits/ethminer/tree/master.svg?style=svg)](https://circleci.com/gh/miscellaneousbits/ethminer/tree/master) | |
+| CircleCI     | Linux   | [![CircleCI](https://circleci.com/gh/greerso/ethminer-progpow/tree/0.9.3.svg?style=svg)](https://circleci.com/gh/greerso/ethminer-progpow/tree/0.9.3) | |
 
 The AppVeyor system automatically builds a Windows .exe for every commit. The latest version is always available [on the landing page](https://ci.appveyor.com/project/jean-m-cyr/ethminer) or you can [browse the history](https://ci.appveyor.com/project/jean-m-cyr/ethminer/history) to access previous builds.
 
