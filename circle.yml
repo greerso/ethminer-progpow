@@ -17,8 +17,8 @@ jobs:
           command: |
               go get -u github.com/tcnksm/ghr
               export PATH=/root/go/bin:$PATH
-              if [ "${CIRCLE_TAG}" != "" ] ; then ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -replace ${CIRCLE_TAG} ./artifacts/; fi
-
+              VERSION=$(build/ethminer/ethminer --version)
+              ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${VERSION} ./artifacts/ethminer/
   cuda10_0:
     docker:
       - image: nvidia/cuda:10.0-devel-ubuntu18.04
