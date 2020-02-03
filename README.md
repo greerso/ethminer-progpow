@@ -6,6 +6,8 @@
 
 > Ethereum miner with OpenCL, CUDA and stratum support
 
+** To benchmark ProgPoW `ethminer -M 7169430 -A progpow --diff 5 --HWMON 2` 7169430 is the block height you're benchmarking against.  You can choose any block, but because of the nature of ProgPoW, you should only compare same block between different hardware types.
+
 **Ethminer** is an Ethash/ProgPoW GPU mining worker: with ethminer you can mine every coin which relies on an Ethash Proof of Work thus including Ethereum, Ethereum Classic, Metaverse, Musicoin, Ellaism, Pirl, Expanse and others. This is **NOT** the actively maintained version of ethminer. It originates from [cpp-ethereum] project (where GPU mining has been discontinued) and builds on the improvements made in [Genoil's fork]. See [FAQ](#faq) for more details.
 
 ## Features
