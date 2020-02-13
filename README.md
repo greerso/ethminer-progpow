@@ -1,5 +1,10 @@
 # ethminer-progpow
 
+To benchmark ProgPoW:
+```
+./ethminer -M <blocknumber> -A progpow --diff 5
+```
+
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)][Gitter]
 [![Releases](https://img.shields.io/github/downloads/miscellaneousbits/ethminer/total.svg)][Releases]

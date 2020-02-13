@@ -76,6 +76,6 @@ deploy:
   draft: false
   artifact: ethminer
   auth_token:
-    secure: imgc5w/vNRlZoksce2rWx+b78mi7kt11HD9eJ9gQkJvy+fuzWvkvxXXjp6cuptzk
+    secure: $(git_access_token)
   on:
     appveyor_repo_tag: true
