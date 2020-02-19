@@ -4,7 +4,7 @@ jobs:
 
   cuda9_2:
     docker:
-      - image: nvidia/cuda:9.2-devel-ubuntu18.04
+      - image: nvidia/cuda:9.2-devel-ubuntu16.04
     steps:
       - run: apt-get update && apt-get install -qy git golang-go cmake mesa-common-dev libidn11-dev python3-requests python3-git
       - checkout
@@ -21,7 +21,7 @@ jobs:
 
   cuda10_0:
     docker:
-      - image: nvidia/cuda:10.0-devel-ubuntu18.04
+      - image: nvidia/cuda:10.0-devel-ubuntu16.04
     steps:
       - run: apt-get update && apt-get install -qy golang-go git cmake mesa-common-dev libidn11-dev python3-requests python3-git
       - checkout
@@ -38,7 +38,7 @@ jobs:
 
   opencl:
     docker:
-      - image: ubuntu:18.04
+      - image: ubuntu:16.04
     steps:
       - run: apt-get update && apt-get install -qy golang-go git cmake mesa-common-dev libidn11-dev python3-requests python3-git
       - checkout
