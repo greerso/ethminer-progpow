@@ -68,8 +68,7 @@ artifacts:
 deploy:
   # Create GitHub release, also set the release name and description.
   provider: GitHub
-  skip_tags: true
-#  tag: $(appveyor_repo_tag_name)
+  tag: $(appveyor_repo_tag_name)
   release: "$(project_name) $(project_version)"
   description: ""
   force_update: true  # Force update in case Travis CI created the release before.
